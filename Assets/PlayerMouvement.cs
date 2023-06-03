@@ -46,7 +46,7 @@ public class PlayerMouvement : MonoBehaviour
 
     void Flip(Vector3 _velocity)
     {
-        if (_velocity.x > 0.1f)
+        if (_velocity.x > -0.1f)
         {
             spriteRenderer.flipX = false;
         }else if(velocity.x < 0.1f)
