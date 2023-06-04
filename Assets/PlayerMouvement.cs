@@ -16,7 +16,7 @@ public class PlayerMouvement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-
+    
     void Update()
     {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight. position);
