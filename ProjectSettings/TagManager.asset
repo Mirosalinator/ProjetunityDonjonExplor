@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ennemi saut
+  - "Ennemi \xE9p\xE9"
   layers:
   - Default
   - TransparentFX
