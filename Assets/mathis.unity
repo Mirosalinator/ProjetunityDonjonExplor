@@ -140,6 +140,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f0b965d31ca2b4c820b8c8e44afb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 60
+  currentHealth: 0
+  invicibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.15
+  isInvicible: 0
+  graphics: {fileID: 298569419}
+--- !u!212 &298569419 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3363582237723152126, guid: f9620cc1ef6b141418a5751c7dc39d04, type: 3}
+  m_PrefabInstance: {fileID: 3363582238012112952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453976975
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,67 +937,11 @@ MonoBehaviour:
   perssonage: {fileID: 298569412}
   timeOffset: 0
   postOffset: {x: 0, y: 0, z: -10}
---- !u!1001 &650903272
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.315204
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.9165516
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.030179176
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354150, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354151, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_Name
-      value: "EnnemiEp\xE9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 968923154667354151, guid: 291870e1e14b3a046861acd13a492626, type: 3}
-      propertyPath: m_TagString
-      value: "Ennemi \xE9p\xE9"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 291870e1e14b3a046861acd13a492626, type: 3}
+--- !u!212 &1384193458 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 968923154855151303, guid: 291870e1e14b3a046861acd13a492626, type: 3}
+  m_PrefabInstance: {fileID: 968923155502250093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691699000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1035,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1185,7 +1140,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1892923604
 GameObject:
@@ -1402,6 +1357,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ennemi saut
       objectReference: {fileID: 0}
+    - target: {fileID: 968923154855151297, guid: 291870e1e14b3a046861acd13a492626, type: 3}
+      propertyPath: graphics
+      value: 
+      objectReference: {fileID: 1384193458}
+    - target: {fileID: 968923154855151297, guid: 291870e1e14b3a046861acd13a492626, type: 3}
+      propertyPath: damageOnCollision
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291870e1e14b3a046861acd13a492626, type: 3}
 --- !u!1001 &3363582238012112952
@@ -1413,7 +1376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3363582237723152116, guid: f9620cc1ef6b141418a5751c7dc39d04, type: 3}
       propertyPath: moveSpeed
-      value: 2000
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 3363582237723152124, guid: f9620cc1ef6b141418a5751c7dc39d04, type: 3}
       propertyPath: m_Name
