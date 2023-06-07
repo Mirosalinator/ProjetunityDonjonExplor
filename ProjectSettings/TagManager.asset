@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ennemi saut
   - "Ennemi \xE9p\xE9"
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
