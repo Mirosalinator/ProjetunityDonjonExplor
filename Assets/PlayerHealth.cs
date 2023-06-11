@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float invicibilityTimeAfterHit = 3f;
     public float invincibilityFlashDelay = 0.2f;
     public bool isInvicible = false;
-
+    public GameObject playerSpawn;
     public SpriteRenderer graphics;
 
     void Start()
@@ -20,10 +20,6 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void TakeDomage(int damage)
     {
@@ -41,6 +37,9 @@ public class PlayerHealth : MonoBehaviour
     {
         while (isInvicible)
         {
+
+
+
             graphics.color = new Color(1f, 1f, 1f, 0f);
             yield return new WaitForSeconds(invincibilityFlashDelay);
             graphics.color = new Color(1f, 1f, 1f, 1f);
@@ -54,6 +53,25 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(invicibilityTimeAfterHit);
         isInvicible = false;
     }
+     
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            RespawnPlayer();
+        }
+    }
 
-
+    private void RespawnPlayer()
+    {
+        if (playerSpawn != null)
+        {
+            transform.position = playerSpawn.transform.position;
+            currentHealth = 100; // Réinitialiser la santé du joueur
+        }
+        else
+        {
+            Debug.LogWarning("Aucun objet avec le tag 'PlayerSpawn' n'a été trouvé.");
+        }
+    }
 }
