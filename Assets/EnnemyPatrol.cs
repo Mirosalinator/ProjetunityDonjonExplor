@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class EnnemyPatrol : MonoBehaviour
 {
     public float speed;

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3363582237723152113}
   - component: {fileID: 3363582237723152115}
   - component: {fileID: 3363582237723152116}
+  - component: {fileID: 2901050364493332592}
   m_Layer: 0
   m_Name: perssonage
   m_TagString: Untagged
@@ -217,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829c414aa3ae68845a3fa16f503e363d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 2500
   jumpForce: 600
   isJumping: 0
   isGrounded: 0
@@ -226,6 +227,25 @@ MonoBehaviour:
   rb: {fileID: 3363582237723152113}
   animator: {fileID: 3363582237723152125}
   spriteRenderer: {fileID: 3363582237723152126}
+--- !u!114 &2901050364493332592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363582237723152124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f0b965d31ca2b4c820b8c8e44afb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 60
+  currentHealth: 0
+  invicibilityTimeAfterHit: 3
+  invincibilityFlashDelay: 0.2
+  isInvicible: 0
+  playerSpawn: {fileID: 2537684959027276289, guid: 053d4a1a94a6a4e4eb260a8530ed3645, type: 3}
+  graphics: {fileID: 3363582237723152126}
 --- !u!1 &3363582237857136307
 GameObject:
   m_ObjectHideFlags: 0
