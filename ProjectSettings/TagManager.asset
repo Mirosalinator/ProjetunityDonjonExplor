@@ -7,6 +7,8 @@ TagManager:
   - Ennemi saut
   - "Ennemi \xE9p\xE9"
   - PlayerSpawn
+  - "T\xE9l\xE9porteur"
+  - Teleporteur
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - enemie
   - 
   - 
   - 
