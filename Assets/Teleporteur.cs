@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Teleporteur : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("menus"); // Remplacez "Menu" par le nom de votre scène de menu
+            SceneManager.LoadScene("Menus"); 
         }
     }
 }
