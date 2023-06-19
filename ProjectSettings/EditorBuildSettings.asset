@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Niveau2.unity
     guid: 1bbefc9661802364a959c1c55a585064
+  - enabled: 1
+    path: Assets/mathias.unity
+    guid: fb290533f0d30de49813170df8439f58
   m_configObjects: {}
